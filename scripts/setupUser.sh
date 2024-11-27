@@ -4,7 +4,7 @@ now=`date +%d%b%Y-%H%M`
 
 exp()
 {
-	"$1" <<(cat <<-EOF
+	"$1" <(cat <<-EOF
 	spawn passwd $USER
 	expect "Enter new UNIX password:"
 	send -- "$passw\r"
